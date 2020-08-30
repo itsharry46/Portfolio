@@ -57,14 +57,6 @@ html, body, .hero
   height: 100%;
 }
 
-.hero 
-{
-  width: 100%;
-  min-height: 600px;
-  background-image: url(https://i.imgur.com/NP4WGY4.jpg);
-  background-size: cover;
-}
-
 .hero h1 
 {
   font-size: 5em;
@@ -107,12 +99,11 @@ html, body, .hero
   color: orange;
 }
 
-#myVideo 
+.video
 {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
+  text-align: center;
+  margin-top: 5%;
 }
+
+
+

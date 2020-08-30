@@ -1,3 +1,18 @@
+ // video script
+ var video = document.getElementById('video');
+    var source = document.createElement('source');
+
+source.setAttribute('src', './video/1.mp4');
+
+video.appendChild(source);
+video.play();
+setTimeout(function() {  
+    video.pause();
+    source.setAttribute('src', './video/2.mp4'); 
+    video.load();
+    video.play(0);
+}, 4800);
+
 // particles on navbar js
 var w = window.innerWidth,
     h = window.innerHeight,
