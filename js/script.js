@@ -1,18 +1,3 @@
- // video script
- var video = document.getElementById('video');
-    var source = document.createElement('source');
-
-source.setAttribute('src', './video/1.mp4');
-
-video.appendChild(source);
-video.play();
-setTimeout(function() {  
-    video.pause();
-    source.setAttribute('src', './video/2.mp4'); 
-    video.load();
-    video.play(0);
-}, 4800);
-
 // particles on navbar js
 var w = window.innerWidth,
     h = window.innerHeight,
@@ -78,7 +63,7 @@ var animation = 'easeOutCubic';
     delay     = 60;
 
 $(document)
-  .on('click', '.fa-bars', function(){
+  .on('click', '.fa-cog', function(){
     var i = 0;
     $('nav').before($('#bubble'));
     $('#bubble').fadeIn();
@@ -96,9 +81,9 @@ $(document)
           }, delay * i)
       }(i, that))
     }); 
-    $('.fa-bars').fadeOut(100,function(){
+    $('.fa-cog').fadeOut(100,function(){
       $(this)
-        .removeClass('fa-bars')
+        .removeClass('fa-cog')
         .addClass('fa-times')
         .fadeIn(); 
     });
@@ -115,7 +100,7 @@ $(document)
       $(this)
         .find($('i'))
         .removeClass('fa-times')
-        .addClass('fa-bars')
+        .addClass('fa-cog')
         .end()
         .fadeIn();
     });

@@ -18,8 +18,7 @@ html
 
 #mainnav li 
 {
-  margin: 55px 0;
-  left: -550px;
+  
   position: relative;
   display: none;
 }
@@ -48,7 +47,7 @@ html
 
 .hamb a 
 {
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
@@ -86,9 +85,8 @@ html, body, .hero
         
 .gap
 {
-  color: white;
-  margin-top: 100px;
-  width: 200px;
+  margin: 500px;
+  font-size: 50px;
 }
         
 .hero h1 span
@@ -99,11 +97,78 @@ html, body, .hero
   color: orange;
 }
 
-.video
+.center
 {
-  text-align: center;
-  margin-top: 5%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
+
+.b_right
+{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.l_right
+{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.l_right a, .b_right a
+{
+  text-decoration: none;
+  color: red;
+}
+
+
+.link {
+  position: relative;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.link:before,
+.link:after {
+  position: absolute;
+  content: '';
+  height: 3px;
+  width: 50%;
+  background: #4ECA78;
+  top: calc(50% + 2px);
+  transition: transform .3s cubic-bezier(.5,.5,0,1);
+}
+
+.link:before {
+  left: 0;
+  transform: translateX(calc(-100% - 10px)) scaleX(0);
+  transform-origin: left;
+}
+
+.link:after {
+  right: 0;
+  transform: translateX(calc(100% + 10px)) scaleX(0);
+  transform-origin: right;
+}
+
+.link:hover:before {
+  transform: translateX(calc(-100% - 10px)) scaleX(1);
+  transform-origin: right;
+}
+
+.link:hover:after {
+  transform: translateX(calc(100% + 10px)) scaleX(1);
+  transform-origin: left;
+}
+
+
+
 
 
 
