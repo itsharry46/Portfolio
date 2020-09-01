@@ -20,146 +20,70 @@
     to { opacity: 1; }
 }
 
-
 body
 {
   padding: 0;
   margin: 0;
 }
 
-html 
+* ,html 
 {
-  font-family: 'Open Sans', sans-serif;
-}
-
-#mainnav 
-{
-  position: absolute;
-  font-family: 'Open Sans', sans-serif;
-  z-index: 1;    
-}
-
-#mainnav li 
-{
-  
-  position: relative;
-  display: none;
-}
-
-#mainnav a 
-{
-  color: white;   
-  text-decoration: none;
-  font-size: 2.5em;
-} 
-
-#mainnav ul li
-{
-  list-style: none;
-  margin-top: -50px;          
-}
-
-.hamb 
-{
-  position: absolute;
-  top: 20px;
-  left: 40px;
-  font-size: 1.5em;
-  z-index: 1;
-}
-
-.hamb a 
-{
-  color: #000;
-  text-decoration: none;
-}
-
-html, body, .hero 
-{
-  height: 100%;
-}
-
-.hero h1 
-{
-  font-size: 5em;
-  text-align: center;
+  font-size: 0.8em;
   font-weight: 700;
   font-family: 'Open Sans', sans-serif;
-  color: #fff;
-  width: 100%;
-  position: absolute;
-  top: 42%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
-
-#bubble 
-{
-  width: 100%;
-  height: 100%;
-  opacity: 0.9;
-  position: fixed;
-  display: none;
-  z-index: 1;
-  background: rgba(0, 0, 0, .5);
-}
-     
-
-.gap1
+.video_comp
 {
   margin: 0;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 20%;
+  -ms-transform: translate(-60%, -50%);
+  transform: translate(-60%, -50%);
+}
+#carousel
+{
+  max-height: 400px;
+  max-width: 1200px;
+  background-size: cover;
+  position: fixed;
+  top: 50%;
+  left: 65%;
   -ms-transform: translate(-60%, -50%);
   transform: translate(-60%, -50%);
 }
 
-        
-.hero h1 span
+.carousel-inner
 {
-  font-size: 90px;
-  letter-spacing: 4;
-  margin-left: -30px;
-  color: orange;
-}
-
-.center
-{
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  box-shadow:20px 20px 50px grey;  
 }
 
 .b_right
 {
   position: fixed;
-  bottom: 10px;
+  bottom: 20px;
   right: 40px;
 }
 
 .l_right
 {
   position: fixed;
-  bottom: 10px;
+  bottom: 20px;
   left: 40px;
 }
 
 .t_left
 {
   position: fixed;
-  top: 10px;
+  top: 30px;
   left: 40px;
 }
 
 .t_right
 {
   position: fixed;
-  top: 20px;
+  top: 30px;
   right: 50px;  
 }
 
@@ -213,11 +137,30 @@ html, body, .hero
 {
   #video
   {
-    width: 300px;
+    width: 200px;
   }
 
-  .gap1
+  .video_comp
   {
-    font-size: 10px;
+    top: 30%;
+    left: 54%;
   }
+
+  #carousel
+  {
+    max-height: 400px;
+    max-width: 1200px;
+    background-size: cover;
+    position: fixed;
+    top: 60%;
+    left: 40%;
+    -ms-transform: translate(-35%, -20%);
+    transform: translate(-35%, -20%);
+  }
+
+  .carousel-inner
+  {
+    border-radius: 25px;
+    box-shadow:20px 20px 50px grey;  
+  } 
 }
