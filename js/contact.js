@@ -9,3 +9,11 @@ $(document).ready(function()
 window.addEventListener("beforeunload", function () {
   document.body.classList.add("animate-out");
 });
+
+$( '.js-input' ).keyup(function() {
+  if( $(this).val() ) {
+     $(this).addClass('not-empty');
+  } else {
+     $(this).removeClass('not-empty');
+  }
+});
