@@ -13,7 +13,7 @@
 @-webkit-keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
+} 
 
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -143,7 +143,10 @@ body
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
+.row {
+  margin: 0 -5px;
+  margin: 50px 0 0 45px;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -166,19 +169,6 @@ body
 .column p
 {
   margin-top: -1px;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-  .video_comp
-  {
-    
-  }
 }
 
 /* Style the counter cards */
@@ -301,4 +291,86 @@ body
 
 .btn-slide2 span.title-hover2 {
   color: #fff;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  #video
+  {
+    width: 120%;
+    height: auto;
+  }
+
+  .video_comp
+  {
+    top: 28%;
+    left: 49%;
+    z-index: 1;
+  }
+
+  .left_container
+  {
+    width: 160%;
+    height: 450px;
+    overflow-x: hidden;
+    position: absolute;
+    top: 40%;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 90,0);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  .left_container h1
+  {
+    font-size: 28px;
+  }
+
+  .type h1
+  {
+    margin-top: 100px;
+  }
+
+  .b_right
+  {
+   position: absolute;
+    bottom: 0;
+   left: 42%;
+  }
+
+  .info
+  {
+    margin-right: 47%;
+  }
+
+  #wrap
+  {
+    position: absolute;
+    left: 17%;
+  }
+
+  .row
+  {
+    margin-top: 15%;
+    margin-left: 04%;
+  }
+
+  .column .card
+  {
+    width: 40%;
+  }
 }

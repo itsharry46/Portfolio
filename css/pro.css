@@ -117,13 +117,14 @@ body
 .cards
 {
   position: absolute;
-  width: 700px;
   left: 40%;
   top: 22%;
-  width: 500px;
-  height: 440px;
+  width: 680px;
+  height: 450px;
   overflow: overlay;
 }
+
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -135,6 +136,12 @@ body
 
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0);
+}
+
+.row
+{
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .row:after
@@ -150,15 +157,50 @@ body
   height: 200px;
   margin-right: 20px;
   margin-bottom: 20px;
-  border-radius: 25px;
+  border-radius: 10px;
   background-color: red;
 }
 
 .card1
 {
-  background-image: url("./tea.png");
+  background-image: url("https://i.imgur.com/kDN9m5P.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 280px 200px;
+}
+
+.card2
+{
+  background-image: url("https://i.imgur.com/wSs7CGK.png");
+  background-repeat: no-repeat;
+  background-size: 280px 200px;
+}
+
+.card3
+{
+  background-image: url("https://i.imgur.com/q3h9E6P.png");
+  background-repeat: no-repeat;
+  background-size: 280px 200px;
+}
+
+.card4
+{
+  background-image: url("https://i.imgur.com/wwxqCrt.png");
+  background-repeat: no-repeat;
+  background-size: 280px 200px;
+}
+
+.card5
+{
+  background-image: url("https://i.imgur.com/cv6lSSc.png?1");
+  background-repeat: no-repeat;
+  background-size: 280px 200px;
+}
+
+.card6
+{
+  background-image: url("https://i.imgur.com/yoMabgW.png");
+  background-repeat: no-repeat;
+  background-size: 280px 200px;
 }
 
 /* Clear floats after the columns */
@@ -183,14 +225,44 @@ body
 
   #video
   {
-    width: 200px;
+    width: 100%;
+    height: auto;
   }
 
   .video_comp
   {
-    top: 30%;
+    top: 28%;
     left: 54%;
     z-index: 1;
   }
 
+  .cards
+  {
+    width: 420px;
+    height: 300px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .row
+  {
+    margin-top: -15%;
+  }
+
+  .column
+  {
+    margin-left: 15%;
+    width: 65%;
+  }
+
+  .l_right
+  {
+    position: absolute;
+    bottom: 0;
+   left: 40%;
+  }
 }
+
