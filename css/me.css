@@ -1,0 +1,304 @@
+/*animate page*/
+.animate-in {
+  -webkit-animation: fadeIn .8s ease-in;
+  animation: fadeIn .8s ease-in;
+}
+
+.animate-out {
+  -webkit-transition: opacity .8s;
+  transition: opacity .8s;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body
+{
+  padding: 0;
+  margin: 0;
+}
+
+* ,html 
+{
+  font-family: 'Open Sans', sans-serif;
+}
+.video_comp
+{
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 83%;
+  -ms-transform: translate(-60%, -50%);
+  transform: translate(-60%, -50%);
+}
+
+.b_right
+{
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+}
+
+.l_right
+{
+  position: fixed;
+  bottom: 20px;
+  left: 40px;
+}
+
+.t_left
+{
+  position: fixed;
+  top: 30px;
+  left: 40px;
+}
+
+.t_right
+{
+  position: fixed;
+  top: 30px;
+  right: 50px;  
+}
+
+.l_right a, .b_right a, .t_right a, .t_left a
+{
+  text-decoration: none;
+  color: black;
+}
+
+
+.link {
+  position: relative;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.link:before,
+.link:after {
+  position: absolute;
+  content: '';
+  height: 3px;
+  width: 50%;
+  background: #4ECA78;
+  top: calc(50% + 2px);
+  transition: transform .3s cubic-bezier(.5,.5,0,1);
+}
+
+.link:before {
+  left: 0;
+  transform: translateX(calc(-100% - 10px)) scaleX(0);
+  transform-origin: left;
+}
+
+.link:after {
+  right: 0;
+  transform: translateX(calc(100% + 10px)) scaleX(0);
+  transform-origin: right;
+}
+
+.link:hover:before {
+  transform: translateX(calc(-100% - 10px)) scaleX(1);
+  transform-origin: right;
+}
+
+.link:hover:after {
+  transform: translateX(calc(100% + 10px)) scaleX(1);
+  transform-origin: left;
+}
+
+.left_container
+{
+  width: 600px;
+  /*background-color: black;*/
+  position: absolute;
+  top: 20%;
+  left: 08%;
+}
+
+.left_container h1
+{
+  font-size: 42px;
+  font-weight: 400px;
+}
+
+.left_container .info
+{
+  text-align: justify;
+  text-transform: capitalize;
+}
+
+/*cards*/
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column img
+{
+  width: 50px;
+}
+
+.column a
+{
+  text-decoration: none;
+  color: black;
+}
+
+.column p
+{
+  margin-top: -1px;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .video_comp
+  {
+    
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #FFDAB9;
+  margin-bottom:20px;
+  height: 100px;
+  width: 100px;
+}
+
+.left
+{
+  position: absolute;
+  left: 10%;
+  text-align: justify;
+}
+.right
+{
+  position: absolute;
+  left: 50%;
+  text-align: justify;
+}
+
+/*button*/
+
+
+#wrap {
+  margin: 10px 0 0 -50px;
+  text-align: center;
+}
+
+.btn-slide2 {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  line-height: 50px;
+  padding: 0;
+  border-radius: 50px;
+  background: rgba(255,174,0,0.3);
+  border: 2px solid #0099cc;
+  margin: 10px;
+  transition: .5s;
+}
+
+.btn-slide2 {
+  border: 2px solid #efa666;
+}
+
+.btn-slide2:hover {
+  background-color: #efa666;
+}
+
+.btn-slide2:hover span.circle2 {
+  left: 100%;
+  margin-left: -45px;
+  background-color: #fdfdfd;
+  color: #0099cc;
+}
+
+.btn-slide2:hover span.circle2 {
+  color: #efa666;
+}
+
+.btn-slide2:hover span.title2 {
+  left: 40px;
+  opacity: 0;
+}
+
+.btn-slide2:hover span.title-hover2 {
+  opacity: 1;
+  left: 40px;
+}
+
+.btn-slide2 span.circle2 {
+  display: block;
+  background-color: #0099cc;
+  color: #fff;
+  position: absolute;
+  float: left;
+  margin: 5px;
+  line-height: 42px;
+  height: 40px;
+  width: 40px;
+  top: 0;
+  left: 0;
+  transition: .5s;
+  border-radius: 50%;
+}
+
+.btn-slide2 span.circle2 {
+  background-color: #efa666;
+}
+
+.btn-slide2 span.title2,
+.btn-slide2 span.title-hover2 {
+  position: absolute;
+  left: 90px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: bold;
+  color: #30abd5;
+  transition: .5s;
+}
+
+.btn-slide2 span.title2,
+.btn-slide2 span.title-hover2 {
+  color: #000;
+  left: 80px;
+}
+
+.btn-slide2 span.title-hover2 {
+  left: 80px;
+  opacity: 0;
+}
+
+.btn-slide2 span.title-hover2 {
+  color: #fff;
+}

@@ -1,23 +1,23 @@
 /*animate page*/
 .animate-in {
-  -webkit-animation: fadeIn .8s ease-in;
-  animation: fadeIn .8s ease-in;
+    -webkit-animation: fadeIn .8s ease-in;
+    animation: fadeIn .8s ease-in;
 }
 
 .animate-out {
-  -webkit-transition: opacity .8s;
-  transition: opacity .8s;
-  opacity: 0;
+    -webkit-transition: opacity .8s;
+    transition: opacity .8s;
+    opacity: 0;
 }
 
 @-webkit-keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 body
@@ -35,7 +35,7 @@ body
   margin: 0;
   position: fixed;
   top: 50%;
-  left: 20%;
+  left: 80%;
   -ms-transform: translate(-60%, -50%);
   transform: translate(-60%, -50%);
 }
@@ -112,85 +112,4 @@ body
 .link:hover:after {
   transform: translateX(calc(100% + 10px)) scaleX(1);
   transform-origin: left;
-}
-
-.cards
-{
-  position: absolute;
-  width: 700px;
-  left: 40%;
-  top: 22%;
-  width: 500px;
-  height: 440px;
-  overflow: overlay;
-}
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(90, 90, 90,0);
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0);
-}
-
-.row:after
-{
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.column {
-  float: left;
-  width: 40%;
-  height: 200px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  border-radius: 25px;
-  background-color: red;
-}
-
-.card1
-{
-  background-image: url("./tea.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.card1 img
-{
-  width: 100px;
-  height: 100px;
-}
-
-@media only screen and (max-width: 600px) 
-{
-  body
-  {
-    overflow: hidden;
-  }
-
-  #video
-  {
-    width: 200px;
-  }
-
-  .video_comp
-  {
-    top: 30%;
-    left: 54%;
-    z-index: 1;
-  }
-
 }
