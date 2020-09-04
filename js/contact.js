@@ -1,3 +1,11 @@
+// cursor
+new kursor(
+{
+  type: 1,
+  removeDefaultCursor:true,
+  color : "#f59b25"
+});
+
 // page animation fade in
 $(document).ready(function()
 {

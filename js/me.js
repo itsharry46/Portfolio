@@ -1,3 +1,30 @@
+new kursor(
+{
+  type: 1,
+  removeDefaultCursor:true,
+  color : "#f59b25"
+});
+
+$(".skill-per").each(function() {
+  var $this = $(this);
+  var per = $this.attr("per");
+  $this.css("width", per + "%");
+  $({ animatedValue: 0 }).animate(
+    { animatedValue: per },
+    {
+      duration: 1000,
+      step: function() {
+        $this.attr("per", Math.floor(this.animatedValue) + "%");
+      },
+      complete: function() {
+        $this.attr("per", Math.floor(this.animatedValue) + "%");
+      }
+    }
+  );
+});
+// cursor
+
+
 // page animation fade in
 $(document).ready(function()
 {
@@ -69,3 +96,5 @@ var TxtType = function(el, toRotate, period) {
         document.body.appendChild(css);
     };
 // end of loop
+
+

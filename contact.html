@@ -5,6 +5,7 @@
   <title>Document</title>
   <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
   <!-- font family -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./css/contact.css">
@@ -39,32 +40,48 @@
     <a href="https://github.com/itsharry46"><img src="https://i.imgur.com/MwOw8ZD.png"></a>
     </div>
 
-   <form class="contact-form row">
+   <form method="POST" autocomplete="off" class="contact-form row" name="google-sheet">
       <div class="form-field col x-50">
-         <input id="name" class="input-text js-input" type="text" required>
+         <input id="name" name="name" class="input-text js-input" type="text" required>
          <label class="label" for="name">Name</label>
       </div>
       <div class="form-field col x-50">
-         <input id="email" class="input-text js-input" type="email" required>
+         <input id="email" name="email" class="input-text js-input" type="email" required>
          <label class="label" for="email">E-mail</label>
       </div>
       <div class="form-field col x-100">
-         <input id="message" class="input-text js-input" type="text" required>
+         <input id="message" name="message" class="input-text js-input" type="text" required>
          <label class="label" for="message">Message</label>
       </div>
       <div class="form-field col x-100 align-center">
-         <input class="submit-btn" type="submit" value="Submit">
+         <input class="submit-btn" type="submit" name="submit" value="Submit">
       </div>
    </form>
 </section>
 </div>
 
+<script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwuwPj-byS4ABzAKqNgco4SOv3uJC8M62JmJTI2dsOBRbWUNHAB/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Happy To Connect With You!!!!!"))
+                .catch(error => console.error('Error!', error.message))
+
+                var frm = document.getElementsByName('google-sheet')[0];
+            frm.reset();
+            return false;
+            })
+
+          </script>
 
 
 
+<script src="https://unpkg.com/kursor"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
 <script src="./js/contact.js"></script>
-<script src="./js/cursor.js"></script>
 </body>
 </html>
