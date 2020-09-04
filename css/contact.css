@@ -278,21 +278,21 @@ body
 {
    #video
   {
-    width: 130%;
+    width: 100%;
     height: auto;
   }
 
   .video_comp
   {
     top: 28%;
-    left: 47%;
+    left: 53%;
     z-index: 1;
   }
 
   .left_container
   {
     position: absolute;
-    top: 45%;
+    top: 43%;
     width: 90%;
   }
   .contact-form .submit-btn
