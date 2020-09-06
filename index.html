@@ -10,6 +10,7 @@
     <!-- font family -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
 </head>
 <body animate-in style="overflow: hidden;">
   <div class="cursor"></div>
@@ -23,8 +24,17 @@
 	</div>
 
   <div class="video center">
-	 <video id="video" muted loop autoplay width="600" height="600" src="https://i.imgur.com/JrOo4dz.mp4"></video>
+    <br><br>
+    <h3>I'm Harry, a guy who tries to implement new components,<br> love to ride.</h3><br>
+	 <video id="video" muted loop autoplay width="400" height="400" src="https://i.imgur.com/JrOo4dz.mp4"></video>
   </div>
+  <script type="text/javascript">
+  $(document).ready(function() {
+      $(".video").on("contextmenu",function(){
+         return false;
+      }); 
+  });
+</script>
   <div class="t_right">
     <h3><a class="link" href="./contact">SAY HI!!</a></h3>
   </div>
