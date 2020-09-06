@@ -27,11 +27,9 @@
   <video id="video" muted loop autoplay width="300" height="300" src="https://i.imgur.com/45MpJHX.mp4"></video>
 </div>
  <script type="text/javascript">
-  $(document).ready(function() {
-      $(".video_comp").on("contextmenu",function(){
-         return false;
-      }); 
-  });
+  $("body").on("contextmenu", function(e) {
+  return false;
+});
 </script>
 
 <div class="cards">
