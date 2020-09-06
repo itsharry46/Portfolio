@@ -29,13 +29,6 @@
  <div class="video_comp">
   <video id="video" muted loop autoplay width="350" height="350" src="https://i.imgur.com/DT7TBZ1.mp4"></video>
 </div>
- <script type="text/javascript">
-  $(document).ready(function() {
-      $(".video_comp").on("contextmenu",function(){
-         return false;
-      }); 
-  });
-</script>
 <div class="l_right">
   <h3><a class="link" href="./me">KNOW ME</a></h3>
 </div>
@@ -69,6 +62,21 @@
 </section>
 </div>
 
+ <script type="text/javascript">
+  function disableRightClickContextMenu(element) {
+  element.addEventListener('contextmenu', function(e) {
+    if (e.button == 2) {
+      // Block right-click menu thru preventing default action.
+      e.preventDefault();
+    }
+  });
+}
+
+// Once the page is loaded, disable the right click menu of the canvas.
+$(document).ready(function() {
+  disableRightClickContextMenu(document.getElementById('video'));
+});
+</script>
 <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwuwPj-byS4ABzAKqNgco4SOv3uJC8M62JmJTI2dsOBRbWUNHAB/exec'
             const form = document.forms['google-sheet']

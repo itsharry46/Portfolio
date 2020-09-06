@@ -31,13 +31,6 @@
  <div class="video_comp">
   <video id="video" muted loop autoplay width="300" height="300" src="https://i.imgur.com/axgcela.mp4"></video>
 </div>
- <script type="text/javascript">
-  $(document).ready(function() {
-      $(".video_comp").on("contextmenu",function(){
-         return false;
-      }); 
-  });
-</script>
 
 <div class="left_container">
   <h1>Hey, <br>I'm <span style="color: orange;">Harry.</span></h1>
@@ -132,6 +125,21 @@
 
 </div>
 
+</script>
+ <script type="text/javascript">
+  function disableRightClickContextMenu(element) {
+  element.addEventListener('contextmenu', function(e) {
+    if (e.button == 2) {
+      // Block right-click menu thru preventing default action.
+      e.preventDefault();
+    }
+  });
+}
+
+// Once the page is loaded, disable the right click menu of the canvas.
+$(document).ready(function() {
+  disableRightClickContextMenu(document.getElementById('video'));
+});
 </script>
 <script src="https://unpkg.com/kursor"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
