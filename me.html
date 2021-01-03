@@ -13,8 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./css/me.css">
 </head>
-<body animate-in style="overflow-x: hidden;">
-	<div class="cursor"></div>
+<body animate-in style="overflow-x: hidden;" onload="myFunction()">
+  <div id="loading"></div>
+  <div class="cursor"></div>
 	<div class="t_left">
    <h3><a class="link" href="./index">HOME</a></h3>
  </div>
@@ -128,5 +129,11 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
 <script src="./js/me.js"></script>
+<script>
+  var preloader = document.getElementById('loading');
+  function myFunction() {
+    preloader.style.display = 'none';
+  }
+</script>
 </body>
 </html>

@@ -10,7 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./css/pro.css">
 </head>
-<body animate-in  style="overflow: hidden;">
+<body animate-in  style="overflow: hidden;" onload="myFunction()">
+  <div id="loading"></div>
   <div class="cursor"></div>
 	<div class="t_left">
    <h3><a class="link" href="./index">HOME</a></h3>
@@ -50,5 +51,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
 <script src="./js/pro.js"></script>
+<script>
+  var preloader = document.getElementById('loading');
+  function myFunction() {
+    preloader.style.display = 'none';
+  }
+</script>
 </body>
 </html>
