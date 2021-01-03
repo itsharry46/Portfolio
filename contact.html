@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="./css/contact.css">
 </head>
 <body animate-in style="overflow: hidden;">
+  <div id="loading"></div>
   <div class="cursor"></div>
 	<div class="t_left">
    <h3><a class="link" href="./index">HOME</a></h3>
@@ -86,5 +87,11 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
 <script src="./js/contact.js"></script>
+<script>
+  var preloader = document.getElementById('loading');
+  function myFunction() {
+    preloader.style.display = 'none';
+  }
+</script>
 </body>
 </html>
